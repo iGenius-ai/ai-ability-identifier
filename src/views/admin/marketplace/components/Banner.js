@@ -1,7 +1,7 @@
 import React from "react";
 
 // Chakra imports
-import { Button, Flex, Link, Text } from "@chakra-ui/react";
+import { Button, Flex, Text } from "@chakra-ui/react";
 
 // Assets
 import banner from "assets/img/nfts/NftBanner1.png";
@@ -24,7 +24,7 @@ export default function Banner() {
           base: "100%",
           md: "64%",
           lg: "46%",
-          xl: "70%",
+          xl: "96%",
           "2xl": "50%",
           "3xl": "42%",
         }}
@@ -39,7 +39,7 @@ export default function Banner() {
           base: "100%",
           md: "64%",
           lg: "40%",
-          xl: "56%",
+          xl: "96%",
           "2xl": "46%",
           "3xl": "34%",
         }}
@@ -63,11 +63,6 @@ export default function Banner() {
           me='38px'>
           Discover now
         </Button>
-        <Link>
-          <Text color='white' fontSize='sm' fontWeight='500'>
-            Watch video
-          </Text>
-        </Link>
       </Flex>
     </Flex>
   );

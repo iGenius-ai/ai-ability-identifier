@@ -1,13 +1,11 @@
 // Chakra imports
 import {
   AvatarGroup,
-  Avatar,
   Box,
   Button,
   Flex,
   Icon,
   Image,
-  Link,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -18,7 +16,7 @@ import React, { useState } from "react";
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
 
 export default function NFT(props) {
-  const { image, name, author, bidders, download, currentbid } = props;
+  const { image, name, author } = props;
   const [like, setLike] = useState(false);
   const textColor = useColorModeValue("navy.700", "white");
   const textColorBid = useColorModeValue("brand.500", "white");
@@ -105,9 +103,6 @@ export default function NFT(props) {
                 "2xl": "0px",
               }}
               fontSize='12px'>
-              {bidders.map((avt, key) => (
-                <Avatar key={key} src={avt} />
-              ))}
             </AvatarGroup>
           </Flex>
           <Flex
@@ -121,29 +116,6 @@ export default function NFT(props) {
               "2xl": "row",
             }}
             mt='25px'>
-            <Text fontWeight='700' fontSize='sm' color={textColorBid}>
-              Current Bid: {currentbid}
-            </Text>
-            <Link
-              href={download}
-              mt={{
-                base: "0px",
-                md: "10px",
-                lg: "0px",
-                xl: "10px",
-                "2xl": "0px",
-              }}>
-              <Button
-                variant='darkBrand'
-                color='white'
-                fontSize='sm'
-                fontWeight='500'
-                borderRadius='70px'
-                px='24px'
-                py='5px'>
-                Place Bid
-              </Button>
-            </Link>
           </Flex>
         </Flex>
       </Flex>

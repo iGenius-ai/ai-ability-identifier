@@ -57,8 +57,8 @@ export default function Upload(props) {
             my={{ base: "auto", "2xl": "10px" }}
             mx='auto'
             textAlign='start'>
-            Stay on the pulse of distributed projects with an anline whiteboard
-            to plan, coordinate and discuss
+            Update your profile and keep up with the latest trends
+            in digital assets creation
           </Text>
           <Flex w='100%'>
             <Button
@@ -69,7 +69,7 @@ export default function Upload(props) {
               mt={{ base: "20px", "2xl": "auto" }}
               variant='brand'
               fontWeight='500'>
-              Publish now
+              Upload File
             </Button>
           </Flex>
         </Flex>

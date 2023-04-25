@@ -23,45 +23,43 @@ export default function GeneralInformation(props) {
         fontSize='2xl'
         mt='10px'
         mb='4px'>
-        General Information
+        Your Information
       </Text>
       <Text color={textColorSecondary} fontSize='md' me='26px' mb='40px'>
-        As we live, our hearts turn colder. Cause pain is what we go through as
-        we become older. We get insulted by others, lose trust for those others.
-        We get back stabbed by friends. It becomes harder for us to give others
-        a hand. We get our heart broken by people we love, even that we give
-        them all...
+        I am a backend developer, proficient in all backend programming languages - I guess.
+        I can wear many hats - or just one. Contact me for any of your backend needs. I've got
+        you covered.
       </Text>
       <SimpleGrid columns='2' gap='20px'>
         <Information
           boxShadow={cardShadow}
           title='Education'
-          value='Stanford University'
+          value='University of Benin'
         />
         <Information
           boxShadow={cardShadow}
           title='Languages'
-          value='English, Spanish, Italian'
+          value='English, French'
         />
         <Information
           boxShadow={cardShadow}
           title='Department'
-          value='Product Design'
+          value='Software Engineering'
         />
         <Information
           boxShadow={cardShadow}
           title='Work History'
-          value='Google, Facebook'
+          value='Hakorld, AI Ability'
         />
         <Information
           boxShadow={cardShadow}
           title='Organization'
-          value='Simmmple Web LLC'
+          value='Hakorld Web Inc.'
         />
         <Information
           boxShadow={cardShadow}
           title='Birthday'
-          value='20 July 1986'
+          value='14 August'
         />
       </SimpleGrid>
     </Card>

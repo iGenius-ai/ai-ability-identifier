@@ -1,17 +1,19 @@
 import {
   Button,
   Flex,
-  Image,
+  Icon,
   Link,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import logoWhite from "assets/img/layout/logoWhite.png";
 import React from "react";
+// Assets
+import { MdPerson } from "react-icons/md";
 
 export default function SidebarDocs() {
   const bgColor = "linear-gradient(135deg, #868CFF 0%, #4318FF 100%)";
   const borderColor = useColorModeValue("white", "navy.800");
+  let menuColor = useColorModeValue( "white", "gray.400");
 
   return (
     <Flex
@@ -36,7 +38,15 @@ export default function SidebarDocs() {
         left='50%'
         top='-47px'
         transform='translate(-50%, 0%)'>
-        <Image src={logoWhite} w='40px' h='40px' />
+        <Icon
+          as={MdPerson}
+          color={menuColor}
+          my='auto'
+          w='20px'
+          h='20px'
+          me='10px'
+          _hover={{ cursor: "pointer" }}
+        />
       </Flex>
       <Flex
         direction='column'

@@ -28,7 +28,6 @@ import Banner from "views/admin/profile/components/Banner";
 import General from "views/admin/profile/components/General";
 import Notifications from "views/admin/profile/components/Notifications";
 import Projects from "views/admin/profile/components/Projects";
-import Storage from "views/admin/profile/components/Storage";
 import Upload from "views/admin/profile/components/Upload";
 
 // Assets
@@ -54,16 +53,11 @@ export default function Overview() {
           gridArea='1 / 1 / 2 / 2'
           banner={banner}
           avatar={avatar}
-          name='Adela Parkson'
-          job='Product Designer'
-          posts='17'
-          followers='9.7k'
-          following='274'
-        />
-        <Storage
-          gridArea={{ base: "2 / 1 / 3 / 2", lg: "1 / 2 / 2 / 3" }}
-          used={25.6}
-          total={50}
+          name='Raven Media'
+          job='Backend Engineer'
+          posts='45'
+          followers='29.7k'
+          following='250'
         />
         <Upload
           gridArea={{
@@ -92,8 +86,8 @@ export default function Overview() {
           gridArea='1 / 2 / 2 / 2'
           banner={banner}
           avatar={avatar}
-          name='Adela Parkson'
-          job='Product Designer'
+          name='Raven Media'
+          job='Backend Engineer'
           posts='17'
           followers='9.7k'
           following='274'
@@ -104,7 +98,7 @@ export default function Overview() {
           pe='20px'
         />
         <Notifications
-          used={25.6}
+          used={21.4}
           total={50}
           gridArea={{
             base: "3 / 1 / 4 / 2",

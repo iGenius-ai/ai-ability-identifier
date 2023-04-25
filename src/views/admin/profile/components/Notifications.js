@@ -18,18 +18,10 @@ export default function Notifications(props) {
           fontSize="2xl"
           mb="4px"
         >
-          Notifications
+          Notification Settings
         </Text>
         <Menu />
       </Flex>
-      <SwitchField
-        isChecked={true}
-        reversed={true}
-        fontSize="sm"
-        mb="20px"
-        id="1"
-        label="Item update notifications"
-      />
       <SwitchField
         reversed={true}
         fontSize="sm"
@@ -46,26 +38,11 @@ export default function Notifications(props) {
         label="Buyer review notifications"
       />
       <SwitchField
-        isChecked={true}
-        reversed={true}
-        fontSize="sm"
-        mb="20px"
-        id="4"
-        label="Rating reminders notifications"
-      />
-      <SwitchField
-        reversed={true}
-        fontSize="sm"
-        mb="20px"
-        id="5"
-        label="Meetups near you notifications"
-      />
-      <SwitchField
         reversed={true}
         fontSize="sm"
         mb="20px"
         id="6"
-        label="Company news notifications"
+        label="Company interest notifications"
       />
       <SwitchField
         isChecked={true}
@@ -73,7 +50,7 @@ export default function Notifications(props) {
         fontSize="sm"
         mb="20px"
         id="7"
-        label="New launches and projects"
+        label="New token alerts"
       />
       <SwitchField
         reversed={true}

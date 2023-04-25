@@ -2,7 +2,6 @@ import React from "react";
 
 import { Icon } from "@chakra-ui/react";
 import {
-  MdPerson,
   MdHome,
   MdLock,
   MdOutlineToken,
@@ -12,6 +11,7 @@ import {
   MdOutlineMessage,
   MdOutlineAnalytics,
   MdOutlineSettings,
+  MdOutlinePerson,
 } from "react-icons/md";
 
 // Admin Imports
@@ -36,7 +36,7 @@ const routes = [
     name: "Profile",
     layout: "/admin",
     path: "/profile",
-    icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
+    icon: <Icon as={MdOutlinePerson} width='20px' height='20px' color='inherit' />,
     component: Profile,
   },
   {
@@ -64,21 +64,21 @@ const routes = [
   {
     name: "Job Board",
     layout: "/admin",
-    path: "/profile",
+    path: "/job-board",
     icon: <Icon as={MdDeveloperBoard} width='20px' height='20px' color='inherit' />,
     component: Profile,
   },
   {
     name: "Knowledge Base",
     layout: "/admin",
-    path: "/profile",
+    path: "/knowledge-base",
     icon: <Icon as={MdOutlineLibraryBooks} width='20px' height='20px' color='inherit' />,
     component: Profile,
   },
   {
     name: "Message",
     layout: "/admin",
-    path: "/profile",
+    path: "/messages",
     icon: <Icon as={MdOutlineMessage} width='20px' height='20px' color='inherit' />,
     component: Profile,
   },
@@ -91,15 +91,15 @@ const routes = [
   },
   {
     name: "Analytics",
-    layout: "/rtl",
-    path: "/rtl-default",
+    layout: "/admin",
+    path: "/analytics",
     icon: <Icon as={MdOutlineAnalytics} width='20px' height='20px' color='inherit' />,
     component: RTL,
   },
   {
     name: "Settings",
     layout: "/admin",
-    path: "/profile",
+    path: "/settings",
     icon: <Icon as={MdOutlineSettings} width='20px' height='20px' color='inherit' />,
     component: Profile,
   }

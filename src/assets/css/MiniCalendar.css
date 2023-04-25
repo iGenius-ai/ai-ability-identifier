@@ -5,6 +5,7 @@
   border: unset;
   background-color: transparent;
   font-family: "DM Sans", sans-serif;
+  width: 100%;
 }
 .react-calendar__navigation__prev2-button {
   display: none;
