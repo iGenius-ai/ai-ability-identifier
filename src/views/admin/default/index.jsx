@@ -29,25 +29,12 @@ import {
 } from "@chakra-ui/react";
 // Assets
 // Custom components
-import MiniCalendar from "components/calendar/MiniCalendar";
 import MiniStatistics from "components/card/MiniStatistics";
 import IconBox from "components/icons/IconBox";
 import React from "react";
-import {
-  MdBarChart,
-  MdOutlineToken,
-  MdOutlineWallet,
-} from "react-icons/md";
-import ComplexTable from "views/admin/default/components/ComplexTable";
-import DailyTraffic from "views/admin/default/components/DailyTraffic";
-import PieCard from "views/admin/default/components/PieCard";
-import Tasks from "views/admin/default/components/Tasks";
+import { MdOutlinePerson2, MdOutlineWallet } from "react-icons/md";
 import TotalSpent from "views/admin/default/components/TotalSpent";
 import WeeklyRevenue from "views/admin/default/components/WeeklyRevenue";
-import {
-  columnsDataComplex,
-} from "views/admin/default/variables/columnsData";
-import tableDataComplex from "views/admin/default/variables/tableDataComplex.json";
 
 export default function UserReports() {
   // Chakra Color Mode
@@ -56,7 +43,7 @@ export default function UserReports() {
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
       <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3, "2xl": 6 }}
+        columns={{ base: 1, md: 1, lg: 2, "2xl": 2 }}
         gap='20px'
         mb='20px'>
         <MiniStatistics
@@ -66,26 +53,12 @@ export default function UserReports() {
               h='56px'
               bg={boxBg}
               icon={
-                <Icon w='32px' h='32px' as={MdBarChart} color={brandColor} />
+                <Icon w='32px' h='32px' as={MdOutlinePerson2} color={brandColor} />
               }
             />
           }
-          name='Earnings'
-          value='$3,500.35'
-        />
-        <MiniStatistics
-          startContent={
-            <IconBox
-              w='56px'
-              h='56px'
-              bg={boxBg}
-              icon={
-                <Icon w='32px' h='32px' as={MdOutlineToken} color={brandColor} />
-              }
-            />
-          }
-          name='Tokens generated'
-          value='3'
+          name='Welcome'
+          value='Greetings, Steve' // User details (name) goes here
         />
         <MiniStatistics
           startContent={
@@ -98,8 +71,8 @@ export default function UserReports() {
               }
             />
           }
-          name='Your balance'
-          value='$15,000'
+          name='Wallet not connected?'
+          value='Connect via Metamask'
         />
       </SimpleGrid>
 
@@ -107,20 +80,10 @@ export default function UserReports() {
         <TotalSpent />
         <WeeklyRevenue />
       </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
+      {/* <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
         <DailyTraffic />
         <PieCard />
-      </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
-        <ComplexTable
-          columnsData={columnsDataComplex}
-          tableData={tableDataComplex}
-        />
-        <Tasks minW='100%' w='100%' />
-      </SimpleGrid>
-      <div columns={{ base: 1, md: 1, xl: 2 }} gap='20px'>
-        <MiniCalendar h='100%' minW='100%' selectRange={false} />
-      </div>
+      </SimpleGrid> */}
     </Box>
   );
 }

@@ -1,69 +1,73 @@
 // Chakra imports
 import {
   Box,
+  Text,
   Button,
   Flex,
   Icon,
-  Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Card from "components/card/Card.js";
 // Custom components
-import BarChart from "components/charts/BarChart";
+import IconBox from "components/icons/IconBox";
+import { MdGroups } from "react-icons/md";
 import React from "react";
-import {
-  barChartDataConsumption,
-  barChartOptionsConsumption,
-} from "variables/charts";
-import { MdBarChart } from "react-icons/md";
-
 export default function WeeklyRevenue(props) {
   const { ...rest } = props;
 
   // Chakra Color Mode
+  const brandColor = useColorModeValue("brand.500", "white");
+  const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
   const textColor = useColorModeValue("secondaryGray.900", "white");
-  const iconColor = useColorModeValue("brand.500", "white");
-  const bgButton = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
-  const bgHover = useColorModeValue(
-    { bg: "secondaryGray.400" },
-    { bg: "whiteAlpha.50" }
-  );
-  const bgFocus = useColorModeValue(
-    { bg: "secondaryGray.300" },
-    { bg: "whiteAlpha.100" }
-  );
+
   return (
     <Card align='center' direction='column' w='100%' {...rest}>
       <Flex align='center' w='100%' px='15px' py='10px'>
-        <Text
-          me='auto'
-          color={textColor}
-          fontSize='xl'
-          fontWeight='700'
-          lineHeight='100%'>
-          Weekly Revenue
-        </Text>
-        <Button
-          align='center'
-          justifyContent='center'
-          bg={bgButton}
-          _hover={bgHover}
-          _focus={bgFocus}
-          _active={bgFocus}
-          w='37px'
-          h='37px'
-          lineHeight='100%'
-          borderRadius='10px'
-          {...rest}>
-          <Icon as={MdBarChart} color={iconColor} w='24px' h='24px' />
-        </Button>
+        <IconBox
+          w='56px'
+          h='56px'
+          bg={boxBg}
+          icon={
+            <Icon w='32px' h='32px' as={MdGroups} color={brandColor} />
+          }
+        />
       </Flex>
 
       <Box h='240px' mt='auto'>
-        <BarChart
-          chartData={barChartDataConsumption}
-          chartOptions={barChartOptionsConsumption}
-        />
+      <Flex flexDirection='column'>
+          <Text
+            color={textColor}
+            fontSize='30px'
+            textAlign='center'
+            fontWeight='700'
+            lineHeight='100%'>
+            Discord Community
+          </Text>
+          <Flex align='center' mb='20px'>
+            <Text
+              color='gray.400'
+              fontSize='xl'
+              fontWeight='500'
+              textAlign='center'
+              mt='4px'
+              me='12px'>
+              Ready for a community like no other? Join us on Discord today! 
+              Connect, learn, and have a blast with like-minded enthusiasts.
+            </Text>
+          </Flex>
+          <Flex w='100%' justifyContent='center' >
+            <Button
+              me='100%'
+              margin='0'
+              w='180px'
+              minW='150px'
+              mt={{ base: "20px", "2xl": "auto" }}
+              variant='brand'
+              fontWeight='500'>
+              Connect with us
+            </Button>
+          </Flex>
+        </Flex>
       </Box>
     </Card>
   );

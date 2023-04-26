@@ -27,7 +27,6 @@ import { Box, Grid } from "@chakra-ui/react";
 import Banner from "views/admin/profile/components/Banner";
 import General from "views/admin/profile/components/General";
 import Notifications from "views/admin/profile/components/Notifications";
-import Projects from "views/admin/profile/components/Projects";
 import Upload from "views/admin/profile/components/Upload";
 
 // Assets
@@ -42,13 +41,13 @@ export default function Overview() {
       <Grid
         templateColumns={{
           base: "1fr",
-          lg: "1.34fr 1fr 1.62fr",
+          lg: "1fr 0 1fr",
         }}
         templateRows={{
-          base: "repeat(3, 1fr)",
+          base: "1fr",
           lg: "1fr",
         }}
-        gap={{ base: "20px", xl: "20px" }}>
+        gap={{ base: "10px", xl: "10px" }}>
         <Banner
           gridArea='1 / 1 / 2 / 2'
           banner={banner}
@@ -73,38 +72,29 @@ export default function Overview() {
         mb='20px'
         templateColumns={{
           base: "1fr",
-          lg: "repeat(2, 1fr)",
-          "2xl": "1.34fr 1.62fr 1fr",
+          lg: "1fr 0 1fr",
         }}
         templateRows={{
           base: "1fr",
-          lg: "repeat(2, 1fr)",
-          "2xl": "1fr",
+          lg: "1fr",
         }}
-        gap={{ base: "20px", xl: "20px" }}>
-        <Projects
-          gridArea='1 / 2 / 2 / 2'
-          banner={banner}
-          avatar={avatar}
-          name='Raven Media'
-          job='Backend Engineer'
-          posts='17'
-          followers='9.7k'
-          following='274'
-        />
+        gap={{ base: "10px", xl: "10px" }}>
         <General
-          gridArea={{ base: "2 / 1 / 3 / 2", lg: "1 / 2 / 2 / 3" }}
+          gridArea={{ base: "1 / 1 / 2 / 2" }}
           minH='365px'
           pe='20px'
         />
         <Notifications
+          marginTop='0'
           used={21.4}
           total={50}
           gridArea={{
             base: "3 / 1 / 4 / 2",
-            lg: "2 / 1 / 3 / 3",
-            "2xl": "1 / 3 / 2 / 4",
+            lg: "1 / 3 / 2 / 4"
           }}
+          minH='365px'
+          minW='100%'
+          pe='20px'
         />
       </Grid>
     </Box>

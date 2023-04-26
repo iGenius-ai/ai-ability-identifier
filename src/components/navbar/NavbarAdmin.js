@@ -71,6 +71,7 @@ export default function AdminNavbar(props) {
       minH='75px'
       justifyContent={{ xl: "center" }}
       lineHeight='25.6px'
+      zIndex='1'
       mx='auto'
       mt={secondaryMargin}
       pb='8px'
